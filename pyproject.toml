@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "queuectl"
+version = "0.1.0"
+description = "A CLI-based background job queue system"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+dependencies = [
+    "click>=8.0.0",
+    "SQLAlchemy>=1.4.0",
+    "python-dateutil>=2.8.0",
+    "tabulate>=0.8.0",
+    "pywin32>=300; sys_platform == 'win32'"
+]
+
+[project.scripts]
+queuectl = "queuectl.cli:cli"
